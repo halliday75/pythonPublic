@@ -28,5 +28,5 @@ def extract_hash_values_from_url(url):
 hash_values = extract_hash_values_from_url(localizedUrlEM3)
 
 # Print the extracted hash values as a single string with commas
-hash_values_string = ', '.join(hash_values)
+hash_values_string = ','.join(hash_values)
 print("Extracted Hash Values:", hash_values_string)
