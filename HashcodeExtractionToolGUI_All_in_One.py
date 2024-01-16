@@ -47,12 +47,6 @@ class App(QWidget):
        self.output_text.setReadOnly(True)
        self.layout.addWidget(self.output_label)
        self.layout.addWidget(self.output_text)
-       
-       # self.projectLink_label = QLabel('Link to Project Strings:')
-       # self.projectLink_text = QTextEdit()
-       # self.projectLink_text.setReadOnly(True)
-       # self.layout.addWidget(self.projectLink_label)
-       # self.layout.addWidget(self.projectLink_text)
 
        self.copy_button = QPushButton('Copy to Clipboard', self)
        self.copy_button.clicked.connect(self.copy_text)
@@ -86,7 +80,7 @@ class App(QWidget):
        hash_values = extract_hash_values_from_url(localizedUrl)
 
       # Print the extracted hash values as a single string with commas
-       hash_values_string = ', '.join(hash_values)
+       hash_values_string = ','.join(hash_values)
        # hash_values_link = '&hashcodes='.join(hash_values)
        self.output(hash_values_string)
        # self.projectLink(hash_values_link)
@@ -120,10 +114,6 @@ class App(QWidget):
    def output(self, text):
      self.output_text.clear()
      self.output_text.append(text)
-
-   # def projectLink(self, text):
-     # self.projectLink_text.clear()
-     # self.projectLink_text.append('https://dashboard.smartling.com/app/projects/5f88f80c9/strings/?' + text)
 
 if __name__ == '__main__':
    app = QApplication(sys.argv)
