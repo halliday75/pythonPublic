@@ -71,7 +71,7 @@ class App(QWidget):
        hash_values = extract_hash_values_from_url(localizedUrl)
 
       # Print the extracted hash values as a single string with commas
-       hash_values_string = ', '.join(hash_values)
+       hash_values_string = ','.join(hash_values)
        self.output(hash_values_string)
 
    def copy_text(self):
