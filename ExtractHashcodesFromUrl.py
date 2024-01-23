@@ -5,6 +5,9 @@ from fake_useragent import UserAgent
 # Which localized URL would you like to Extract Hashcodes from?
 localizedUrl = ""
 
+if localizedUrl[:4] != 'http':
+    localizedUrl = 'https://' + localizedUrl
+
 # Append EM3 parameter to URL
 localizedUrlEM3 = localizedUrl + "?smartling_editmode=3"
 
