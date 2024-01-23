@@ -48,6 +48,9 @@ class App(QWidget):
    def submit(self):
        url = self.url_input.text()
 
+       if url[:4] != 'http':
+        url = 'https://' + url
+      
        # Append Editmode 3 parameter to URL
        localizedUrl = url + '?smartling_editmode=3'
 
