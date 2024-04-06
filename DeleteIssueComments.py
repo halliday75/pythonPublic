@@ -49,7 +49,7 @@ text = """
 
 print('To bulk delete comments from an issue, please follow the below prompts: \n\n');
 
-# Define username(Admin), password(Admin) + Project and Job Uid for the Job you want to download here
+# Define username(Admin), password(Admin) + Project and Issue Uid for the Issue you want to delete comments from
 username = input('Enter Smartling Admin Email Address: ')
 password = getpass('Enter Smartling Dashboard Password: ')
 projectUid = input('Enter Project Uid: ')
@@ -102,10 +102,10 @@ for match in matches:
         'Authorization': 'Bearer ' + access_token
     }
 
-    # Make get request
+    # Make delete request
     response = requests.delete(url, headers=headers)
 
-    # Check if list files call was successful
+    # Check if delete Comment call was successful
     if response.status_code == 200:
         print("Comment deleted for Comment Uid: " + match)
         count+=1
